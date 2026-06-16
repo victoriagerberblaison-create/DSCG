@@ -21,6 +21,7 @@
     var C = window.APP_CONFIG || {};
     window.CFG = {
       nom_app_global:      (C.app||{}).nom_app_global      || 'DSCG',
+      kicker_global:       (C.app||{}).kicker_global       || 'Révisions',
       titre_court:        (C.app||{}).titre_court        || 'DEC UE1',
       kicker:             (C.app||{}).kicker             || 'DEC · UE 1',
       kicker_long:        (C.app||{}).kicker_long        || 'DEC · UE 1 · 16 sessions',
@@ -2439,6 +2440,7 @@ function renderSyncIndicator() {
 function renderSplash(root) {
   root.innerHTML = `
     <div class="splash">
+      <div class="splash-kicker">${window.CFG.kicker_global}</div>
       <div class="splash-title">${window.CFG.nom_app_global}</div>
       <div class="splash-dot"></div>
       <div class="splash-sub">Chargement…</div>
@@ -2461,6 +2463,7 @@ function renderAuth(root) {
   root.innerHTML = `
     <div class="screen-auth">
       <div class="masthead">
+        <div class="kicker">${window.CFG.kicker_global}</div>
         <h1>${title}</h1>
         <p>${subtitle}</p>
       </div>
