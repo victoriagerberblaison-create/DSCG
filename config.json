@@ -1,0 +1,236 @@
+{
+  "_commentaire": "Fichier de configuration — modifiez uniquement ce fichier pour adapter l'app à une nouvelle matière.",
+  "app": {
+    "titre_court": "DEC UE1",
+    "kicker": "DEC · UE 1",
+    "kicker_long": "DEC · UE 1 · 16 sessions",
+    "titre_matiere_html": "Réglementation & <em>déontologie</em>",
+    "sous_titre_matiere": "déontologie & réglementation",
+    "sous_titre_auth": "Flashcards de révision du programme",
+    "cache_prefix": "dec-ue1:"
+  },
+  "matieres": [
+    {
+      "id": "ue1",
+      "table": "flashcards_dscg_ue1",
+      "nom_court": "UE1",
+      "nom_complet": "Gestion juridique, fiscale et sociale",
+      "kicker": "DSCG · UE 1",
+      "kicker_long": "DSCG · UE 1 · Droit",
+      "titre_matiere_html": "Gestion juridique,<br>fiscale & <em>sociale</em>",
+      "sous_titre_matiere": "droit & fiscalité",
+      "couleurs": {
+        "accent": "#b5451e",
+        "accent_soft": "#e8c5b1"
+      },
+      "themes": {
+        "ec-cadre": {
+          "label": "Cadre normatif & typologie des missions"
+        },
+        "ec-assurance": {
+          "label": "Missions d'assurance sur comptes historiques"
+        },
+        "ec-autres": {
+          "label": "Autres missions & prestations"
+        },
+        "ec-perimetre": {
+          "label": "Périmètre & exercice de la profession"
+        },
+        "ec-structures": {
+          "label": "Formes d'exercice & structures"
+        },
+        "ec-deonto": {
+          "label": "Déontologie — principes & devoirs"
+        },
+        "ec-client": {
+          "label": "Relations client (lettre de mission, honoraires)"
+        },
+        "ec-ordre": {
+          "label": "Organisation ordinale (CNOEC, CROEC)"
+        },
+        "ec-respo": {
+          "label": "Responsabilités & discipline"
+        },
+        "ec-qualite": {
+          "label": "Qualité, contrôle & formation"
+        },
+        "ec-lab": {
+          "label": "LCB-FT"
+        },
+        "cac-orga": {
+          "label": "Organisation de la profession (H3C/H2A, CNCC)"
+        },
+        "cac-acces": {
+          "label": "Accès & conditions d'exercice"
+        },
+        "cac-deonto": {
+          "label": "Code de déontologie — structure & principes"
+        },
+        "cac-mission": {
+          "label": "Mission de certification des comptes"
+        },
+        "cac-indep": {
+          "label": "Indépendance & situations à risques"
+        },
+        "cac-reseau": {
+          "label": "Réseau"
+        },
+        "cac-sacc": {
+          "label": "SACC, EIP & services interdits"
+        },
+        "cac-hono": {
+          "label": "Honoraires & barème d'heures"
+        },
+        "cac-coco": {
+          "label": "Co-commissariat"
+        },
+        "cac-revel": {
+          "label": "Révélation, alerte & délits"
+        },
+        "cac-secret": {
+          "label": "Secret professionnel"
+        },
+        "cac-mandat": {
+          "label": "Nomination, durée du mandat, démission"
+        },
+        "cac-respo": {
+          "label": "Responsabilités & discipline"
+        },
+        "cac-qualite": {
+          "label": "Contrôle qualité"
+        },
+        "cac-lab": {
+          "label": "LCB-FT"
+        },
+        "cac-pub": {
+          "label": "Publicité & sollicitation"
+        },
+        "cac-csrd": {
+          "label": "Durabilité / CSRD"
+        }
+      }
+    },
+    {
+      "id": "ue2",
+      "table": "flashcards_dscg_ue2",
+      "nom_court": "UE2",
+      "nom_complet": "Finance",
+      "kicker": "DSCG · UE 2",
+      "kicker_long": "DSCG · UE 2 · Finance",
+      "titre_matiere_html": "Finance<br>d'<em>entreprise</em>",
+      "sous_titre_matiere": "finance",
+      "couleurs": {
+        "accent": "#1e5fb5",
+        "accent_soft": "#c5d4e8"
+      }
+    },
+    {
+      "id": "ue3",
+      "table": "flashcards_dscg_ue3",
+      "nom_court": "UE3",
+      "nom_complet": "Management et contrôle de gestion",
+      "kicker": "DSCG · UE 3",
+      "kicker_long": "DSCG · UE 3 · Contrôle de gestion",
+      "titre_matiere_html": "Management &<br><em>contrôle de gestion</em>",
+      "sous_titre_matiere": "management & contrôle de gestion",
+      "couleurs": {
+        "accent": "#7a4fb5",
+        "accent_soft": "#dcd0ec"
+      }
+    },
+    {
+      "id": "ue4",
+      "table": "flashcards_dscg_ue4",
+      "nom_court": "UE4",
+      "nom_complet": "Comptabilité et audit",
+      "kicker": "DSCG · UE 4",
+      "kicker_long": "DSCG · UE 4 · Comptabilité & audit",
+      "titre_matiere_html": "Comptabilité<br>& <em>audit</em>",
+      "sous_titre_matiere": "comptabilité & audit",
+      "couleurs": {
+        "accent": "#b5451e",
+        "accent_soft": "#e8c5b1"
+      }
+    },
+    {
+      "id": "ue5",
+      "table": "flashcards_dscg_ue5",
+      "nom_court": "UE5",
+      "nom_complet": "Management des systèmes d'information",
+      "kicker": "DSCG · UE 5",
+      "kicker_long": "DSCG · UE 5 · Systèmes d'information",
+      "titre_matiere_html": "Management des<br><em>systèmes d'information</em>",
+      "sous_titre_matiere": "systèmes d'information",
+      "couleurs": {
+        "accent": "#1e8fa3",
+        "accent_soft": "#c5e4e8"
+      }
+    },
+    {
+      "id": "ue6",
+      "table": "flashcards_dscg_ue6",
+      "nom_court": "UE6",
+      "nom_complet": "Anglais des affaires",
+      "kicker": "DSCG · UE 6",
+      "kicker_long": "DSCG · UE 6 · Anglais",
+      "titre_matiere_html": "Business<br><em>English</em>",
+      "sous_titre_matiere": "anglais des affaires",
+      "couleurs": {
+        "accent": "#b5451e",
+        "accent_soft": "#e8c5b1"
+      }
+    },
+    {
+      "id": "ue7",
+      "table": "flashcards_dscg_ue7",
+      "nom_court": "UE7",
+      "nom_complet": "Mémoire professionnel",
+      "kicker": "DSCG · UE 7",
+      "kicker_long": "DSCG · UE 7 · Mémoire",
+      "titre_matiere_html": "Mémoire<br><em>professionnel</em>",
+      "sous_titre_matiere": "mémoire professionnel",
+      "couleurs": {
+        "accent": "#5a4a3a",
+        "accent_soft": "#d4c9b2"
+      }
+    }
+  ],
+  "contenu": {
+    "nb_questions_total": "600",
+    "description_premium": "Des cartes supplémentaires couvrant l'intégralité du programme.",
+    "description_app": "Accédez à des cartes supplémentaires pour couvrir l'intégralité du programme — soit <strong>600 questions au total</strong> pour réviser sans laisser de zones d'ombre.",
+    "description_a_propos": "Flashcards de cours conçues pour réviser efficacement le programme du DSCG. Les réponses sont rédigées pour être synthétiques et fidèles au programme officiel."
+  },
+  "couleurs": {
+    "ec": "#b5451e",
+    "ec_soft": "#e8c5b1",
+    "cac": "#2d4a2f",
+    "cac_soft": "#c5d4c5"
+  },
+  "premium": {
+    "_commentaire": "Grille tarifaire par nombre d'UE débloquées (abonnement annuel, par compte). 'paliers' : prix TOTAL pour 1, 2, 3 UE. 'pack_complet' : prix pour les 7 UE.",
+    "devise": "€",
+    "paliers": {
+      "1": 4.99,
+      "2": 8.99,
+      "3": 12.99
+    },
+    "pack_complet": {
+      "nb_ue": 7,
+      "prix": 24.99
+    }
+  },
+  "societe": {
+    "nom": "DEC-ouverte",
+    "adresse": "12 rue de la Tuilerie, 67980 Hangenbieten",
+    "siren": "en cours d'immatriculation",
+    "email": "contact@dec-ouverte.fr",
+    "annee": "2026",
+    "auteur": "VGB"
+  },
+  "technique": {
+    "supabase_url": "https://mlppnktthqgipcgnpgnp.supabase.co",
+    "supabase_anon_key": "sb_publishable_2oilb7ofnczMgPlQVRNHwA_BSo5jUFT",
+    "google_analytics": "G-4PTNX7JT9V"
+  }
+}
