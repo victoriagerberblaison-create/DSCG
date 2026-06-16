@@ -1,6 +1,7 @@
 {
   "_commentaire": "Fichier de configuration — modifiez uniquement ce fichier pour adapter l'app à une nouvelle matière.",
   "app": {
+    "nom_app_global": "DSCG",
     "titre_court": "DEC UE1",
     "kicker": "DEC · UE 1",
     "kicker_long": "DEC · UE 1 · 16 sessions",
@@ -22,92 +23,6 @@
       "couleurs": {
         "accent": "#b5451e",
         "accent_soft": "#e8c5b1"
-      },
-      "themes": {
-        "ec-cadre": {
-          "label": "Cadre normatif & typologie des missions"
-        },
-        "ec-assurance": {
-          "label": "Missions d'assurance sur comptes historiques"
-        },
-        "ec-autres": {
-          "label": "Autres missions & prestations"
-        },
-        "ec-perimetre": {
-          "label": "Périmètre & exercice de la profession"
-        },
-        "ec-structures": {
-          "label": "Formes d'exercice & structures"
-        },
-        "ec-deonto": {
-          "label": "Déontologie — principes & devoirs"
-        },
-        "ec-client": {
-          "label": "Relations client (lettre de mission, honoraires)"
-        },
-        "ec-ordre": {
-          "label": "Organisation ordinale (CNOEC, CROEC)"
-        },
-        "ec-respo": {
-          "label": "Responsabilités & discipline"
-        },
-        "ec-qualite": {
-          "label": "Qualité, contrôle & formation"
-        },
-        "ec-lab": {
-          "label": "LCB-FT"
-        },
-        "cac-orga": {
-          "label": "Organisation de la profession (H3C/H2A, CNCC)"
-        },
-        "cac-acces": {
-          "label": "Accès & conditions d'exercice"
-        },
-        "cac-deonto": {
-          "label": "Code de déontologie — structure & principes"
-        },
-        "cac-mission": {
-          "label": "Mission de certification des comptes"
-        },
-        "cac-indep": {
-          "label": "Indépendance & situations à risques"
-        },
-        "cac-reseau": {
-          "label": "Réseau"
-        },
-        "cac-sacc": {
-          "label": "SACC, EIP & services interdits"
-        },
-        "cac-hono": {
-          "label": "Honoraires & barème d'heures"
-        },
-        "cac-coco": {
-          "label": "Co-commissariat"
-        },
-        "cac-revel": {
-          "label": "Révélation, alerte & délits"
-        },
-        "cac-secret": {
-          "label": "Secret professionnel"
-        },
-        "cac-mandat": {
-          "label": "Nomination, durée du mandat, démission"
-        },
-        "cac-respo": {
-          "label": "Responsabilités & discipline"
-        },
-        "cac-qualite": {
-          "label": "Contrôle qualité"
-        },
-        "cac-lab": {
-          "label": "LCB-FT"
-        },
-        "cac-pub": {
-          "label": "Publicité & sollicitation"
-        },
-        "cac-csrd": {
-          "label": "Durabilité / CSRD"
-        }
       }
     },
     {
@@ -225,6 +140,7 @@
     "adresse": "12 rue de la Tuilerie, 67980 Hangenbieten",
     "siren": "en cours d'immatriculation",
     "email": "contact@dec-ouverte.fr",
+    "site_web": "dec-ouverte.fr",
     "annee": "2026",
     "auteur": "VGB"
   },
