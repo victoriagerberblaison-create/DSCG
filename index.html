@@ -20,6 +20,7 @@
     // Raccourcis globaux
     var C = window.APP_CONFIG || {};
     window.CFG = {
+      nom_app_global:      (C.app||{}).nom_app_global      || 'DSCG',
       titre_court:        (C.app||{}).titre_court        || 'DEC UE1',
       kicker:             (C.app||{}).kicker             || 'DEC · UE 1',
       kicker_long:        (C.app||{}).kicker_long        || 'DEC · UE 1 · 16 sessions',
@@ -44,6 +45,7 @@
       adresse:     (C.societe||{}).adresse || '12 rue de la Tuilerie, 67980 Hangenbieten',
       siren:       (C.societe||{}).siren   || 'en cours d\'immatriculation',
       email:       (C.societe||{}).email   || 'contact@dec-ouverte.fr',
+      site_web:    (C.societe||{}).site_web || 'dec-ouverte.fr',
       annee:       (C.societe||{}).annee   || '2026',
       auteur:      (C.societe||{}).auteur  || 'VGB',
 
@@ -2437,8 +2439,7 @@ function renderSyncIndicator() {
 function renderSplash(root) {
   root.innerHTML = `
     <div class="splash">
-      <div class="splash-kicker">${window.CFG.kicker}</div>
-      <div class="splash-title">${window.CFG.titre_matiere_html}</div>
+      <div class="splash-title">${window.CFG.nom_app_global}</div>
       <div class="splash-dot"></div>
       <div class="splash-sub">Chargement…</div>
     </div>
@@ -2454,13 +2455,12 @@ function renderAuth(root) {
   const err = State.authError;
   const info = State.authInfo;
 
-  const title = window.CFG.titre_matiere_html.replace('&', '<br>&');
+  const title = window.CFG.nom_app_global;
   const subtitle = window.CFG.sous_titre_auth;
 
   root.innerHTML = `
     <div class="screen-auth">
       <div class="masthead">
-        <div class="kicker">${window.CFG.kicker}</div>
         <h1>${title}</h1>
         <p>${subtitle}</p>
       </div>
@@ -2485,7 +2485,8 @@ function renderAuth(root) {
         Ton avancement est synchronisé entre tous tes appareils. Ton email ne sert qu'à te connecter ; aucune autre utilisation.
         <div style="margin-top: 20px; padding-top: 16px; border-top: 1px dotted var(--rule); font-size: 11px; letter-spacing: 0.04em; color: var(--ink-mute);">
           © ${window.CFG.nom_societe} by ${window.CFG.auteur}, ${window.CFG.annee}<br>
-          <a href="mailto:${window.CFG.email}" style="color: var(--ink-mute); text-decoration: underline; text-underline-offset: 2px;">${window.CFG.email}</a>
+          <a href="mailto:${window.CFG.email}" style="color: var(--ink-mute); text-decoration: underline; text-underline-offset: 2px;">${window.CFG.email}</a><br>
+          <a href="https://${window.CFG.site_web}" target="_blank" rel="noopener" style="color: var(--ink-mute); text-decoration: underline; text-underline-offset: 2px;">${window.CFG.site_web}</a>
         </div>
       </div>
     </div>
@@ -2867,6 +2868,17 @@ async function loadCards(tableName) {
     if (CARDS.length === 0) {
       console.warn(`loadCards: aucune carte retournée par Supabase pour la table "${table}".`);
     }
+
+    // Construire THEMES à partir des valeurs distinctes de la colonne "theme"
+    // des cartes elles-mêmes (le thème vient désormais du fichier de données,
+    // plus de config.json). L'ordre d'apparition dans les données est conservé.
+    THEMES = {};
+    for (const c of CARDS) {
+      const key = c.theme;
+      if (key && !THEMES[key]) {
+        THEMES[key] = { label: key };
+      }
+    }
   } catch (err) {
     console.error(`loadCards: erreur pour la table "${table}"`, err);
     // Fallback gracieux : CARDS reste vide, l'UI affichera un message
@@ -2898,9 +2910,8 @@ function applyMatiereVisuals(matiere) {
   window.CFG.sous_titre_matiere = matiere.sous_titre_matiere || window.CFG.sous_titre_matiere;
   window.CFG.titre_court        = matiere.nom_court          || window.CFG.titre_court;
 
-  // Thèmes de la matière sélectionnée (filtre, progression par thème, etc.)
-  THEMES = matiere.themes || {};
-  // Le filtre par thème doit être réinitialisé : les clés de THEMES ont changé
+  // Le filtre par thème est réinitialisé au changement de matière, car
+  // THEMES sera reconstruit à partir des nouvelles cartes chargées (voir loadCards)
   State.filter = null;
 
   // Titre de la page / icône app
@@ -3655,7 +3666,7 @@ function renderPremiumInfo(root) {
         <br><br>
         <strong>${window.CFG.nom_societe}</strong> — ${window.CFG.adresse}<br>
         SIREN : ${window.CFG.siren}<br>
-        Contact : <a href="mailto:${window.CFG.email}" style="color:var(--ink-mute);">${window.CFG.email}</a>
+        Contact : <a href="mailto:${window.CFG.email}" style="color:var(--ink-mute);">${window.CFG.email}</a> · <a href="https://${window.CFG.site_web}" target="_blank" rel="noopener" style="color:var(--ink-mute);">${window.CFG.site_web}</a>
       </div>
 
       <!-- MODALE CGV -->
@@ -3813,7 +3824,8 @@ function renderSettings(root) {
         Synchronisation entre appareils via compte email + mot de passe. Les données ne servent qu'à ton usage et ne sont transmises à personne.
         <div style="margin-top: 22px; padding-top: 14px; border-top: 1px dotted var(--rule); letter-spacing: 0.04em;">
           © ${window.CFG.nom_societe} by ${window.CFG.auteur}, ${window.CFG.annee}<br>
-          <a href="mailto:${window.CFG.email}" style="color: var(--ink-mute); text-decoration: underline; text-underline-offset: 2px;">${window.CFG.email}</a>
+          <a href="mailto:${window.CFG.email}" style="color: var(--ink-mute); text-decoration: underline; text-underline-offset: 2px;">${window.CFG.email}</a><br>
+          <a href="https://${window.CFG.site_web}" target="_blank" rel="noopener" style="color: var(--ink-mute); text-decoration: underline; text-underline-offset: 2px;">${window.CFG.site_web}</a>
         </div>
       </div>
     </div>
