@@ -2,6 +2,7 @@
   "_commentaire": "Fichier de configuration — modifiez uniquement ce fichier pour adapter l'app à une nouvelle matière.",
   "app": {
     "nom_app_global": "DSCG",
+    "kicker_global": "Révisions",
     "titre_court": "DEC UE1",
     "kicker": "DEC · UE 1",
     "kicker_long": "DEC · UE 1 · 16 sessions",
